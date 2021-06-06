@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'blog/home_style.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap" rel="stylesheet">
+    <title>João Tinti</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <ul class="meu-nome">
+                    <li><a href="#">JOÃO TINTI</a></li>   
+                </ul>
+
+                <ul class="menu-principal">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">CONTATO</a></li>
+                </ul>
+
+                <ul class="dropdown">
+                    <button class="dropbtn">MAIS</button>
+                    <div class="dropdown-content">
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">BLOG</a></li>
+                        <li><a href="#">CONTATO</a></li>
+                    </div>
+                </ul>
+
+            </nav>
+        </header>
+        <section>
+            <article>
+                <div class="redes-sociais">
+                    <h1>Olá! Meu nome é <span style="color:#20639B">João</span> e essas são minhas redes sociais:</h1>
+                    <div class="principal">
+                        <ul>
+                            <a href="https://www.facebook.com/joao.v.tinti/" target="_blank"><li id="facebook">FACEBOOK</li></a>
+                            <a href="https://www.linkedin.com/in/joaotinti75/" target="_blank"><li id="linkedin">LINKEDIN</li></a>
+                            <a href="https://www.instagram.com/joao.tinti/" target="_blank"><li id="instagram">INSTAGRAM</li></a>
+                            <a href="https://github.com/joaotinti75" target="_blank"><li id="github">GITHUB</li></a>
+                            <a href="https://www.youtube.com/channel/UChjskKGW9ebyuVgNYpEZ92Q" target="_blank"><li id="youtube">YOUTUBE</li></a>
+                            <a href="{% static 'blog/curriculo_JoaoVitor_bemAgro.pdf' %}" target="_blank"><li id="curriculo">MEU CURRICULO</li></a>
+                        </ul>
+                        <div class="foto">
+                            <h2>Sobre mim</h2>
+                            <img src="{% static 'blog/joao_imagem.jpg' %}" alt="foto de João" title="João Vitor">
+                            <figcaption>Engenheiro Agrônomo, Analista e Desenvolvedor de Sistemas, Nerd e Youtuber 🤓🌽</figcaption>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+    <script>
+        /*
+        setTimeout(()=> {
+            alert('ola mundo');
+        }, 5000);
+        */
+
+        let botao = document.querySelector('.dropbtn')
+        let dropdown = document.querySelector('.dropdown-content')
+        botao.addEventListener('click', () => {
+            if (dropdown.style.display === '') {
+                dropdown.style.display = 'block';
+            } else {
+                dropdown.style.display = '';
+            }
+        });
+
+    </script>
+</body>
+</html>
