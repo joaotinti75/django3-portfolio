@@ -6,3 +6,6 @@ def home(request):
 
 def blog(request):
     return render(request, 'blog/blogs.html')
+
+def contato(request):
+    return render(request, 'blog/contato.html')
