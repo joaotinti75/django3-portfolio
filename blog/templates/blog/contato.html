@@ -1,7 +1,26 @@
 {% extends 'blog/base.html' %}
+{% load static %}
+
+{% block head %}
+
+<link rel="stylesheet" href="{% static 'blog/contato-style.css' %}">
+<link rel="icon" href="{% static 'blog/phone.png' %}" type="image/gif">
+<title>CONTATO | João Tinti</title>
+
+{% endblock %}
 
 {% block content %}
-<article>
-    <h1>Telefone: (16) 99797-6099</h1>
-</article>
+<section>
+    <article>
+        <div class="contato">
+            <h1><span>Telefone:</span> (16) 99797-6099 <img src="{% static 'blog/zap.png' %}"></h1>
+        </div>
+        <div class="contato">
+            <h1><span>E-mail: </span>joaotinti75@gmail.com <img src="{% static 'blog/gmail.png' %}"></h1>
+        </div>
+    </article>
+</section>
+
+<div>Icons made by <a href="https://www.flaticon.com/authors/vectors-market" title="Vectors Market">Vectors Market</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
 {% endblock %}

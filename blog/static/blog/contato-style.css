@@ -1,0 +1,128 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation-name: bodyColor;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bodyColor {
+  0% {
+    background-color: #173f5f;
+  }
+  25% {
+    background-color: #551a8b;
+  }
+  50% {
+    background-color: #ca3542;
+  }
+  75% {
+    background-color: #ed553b;
+  }
+  100% {
+    background-color: #173f5f;
+  }
+}
+
+.container {
+  animation-name: showUp;
+  animation-duration: 2s;
+  width: 70%;
+  position: absolute;
+}
+
+@keyframes showUp {
+  0% {
+    margin-top: -200vh;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+article {
+  display: block;
+}
+
+.contato {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+}
+
+span {
+  color: #ed553b;
+  animation-name: spanColor;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spanColor {
+  0% {
+    color: #173f5f;
+  }
+  25% {
+    color: #551a8b;
+  }
+  50% {
+    color: #ca3542;
+  }
+  75% {
+    color: #ed553b;
+  }
+  100% {
+    color: #173f5f;
+  }
+}
+
+h1 {
+  color: #173f5f;
+  width: 100%;
+  font-size: clamp(30px, 3vw, 70px);
+}
+
+@media all and (max-width: 700px) {
+  h1 {
+    display: block;
+    font-size: 23px;
+  }
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+
+  span {
+    display: block;
+  }
+}
+
+@media all and (max-width: 400px) {
+  h1 {
+    display: block;
+    font-size: 23px;
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+    display: block;
+  }
+
+  span {
+    display: block;
+  }
+}
+
+@media all and (max-width: 300px) {
+  .container {
+    width: 80%;
+  }
+}

@@ -1,0 +1,75 @@
+.container {
+    animation-name: showUp;
+    animation-duration: 2s;
+    position: absolute;
+}
+
+@keyframes showUp {
+    0% {    
+        margin-right: -200vw;   
+    }
+    100% {
+        margin-right: 0;
+    }
+}
+
+h1 {
+    color: #551A8B;
+}
+
+h2 {
+    display: block;
+    font-size: 2.4rem;
+}
+
+div.blog-container {
+    border: 2px solid rgb(190, 177, 177);
+    border-radius: 10px;
+    box-shadow: .2px .2px #000;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+time {
+    display: block;
+    font-size: 1.3rem;
+    margin-bottom: 1.4rem;
+    font-family: 'Signika', sans-serif;
+}
+
+.blog-container h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+p, a {
+    font-family: 'Signika', sans-serif;
+    font-size: 1.8rem;
+}
+
+iframe {
+    width: 100%;
+    height: 415px;
+}
+
+@media all and (max-width: 580px) {
+
+    h1 {
+        display: block;
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p, a {
+        font-size: 1.2rem;
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+}

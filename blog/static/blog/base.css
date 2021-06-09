@@ -2,6 +2,19 @@ body {
     margin: 0;
     width: 100%;
     background-color: #86cad0;
+    animation-name: bodyColor;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes bodyColor {
+    0% {background-color: #173F5F;}
+    25% {background-color: #551A8B;}
+    50% {background-color: #CA3542;}
+    75% {background-color: #ED553B;}
+    100% {background-color: #173F5F;}
 }
 
 .container {
@@ -10,6 +23,18 @@ body {
     background-color: #fff;
     border-radius: 10px;
     padding: 30px;
+    animation-name: showUp;
+    animation-duration: 2s;
+    position: absolute;
+}
+
+@keyframes showUp {
+    0% {    
+        margin-left: -200vw;   
+    }
+    100% {
+        margin-left: 0;
+    }
 }
 
 nav a {
@@ -19,8 +44,9 @@ nav a {
 
 nav a:hover {
     border-bottom: 2px solid #ff0000;
-    font-weight:bold;
+    font-weight: bold;
 }
+
 
 .menu-principal {
     display: flex;

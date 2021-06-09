@@ -1,0 +1,44 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'blog/blogs-style.css' %}">
+<title>BLOG | João Tinti</title>
+{% endblock %}
+
+{% block content %}
+<h1>Aqui você pode ver alguns dos meus projetos pessoais e experiências</h1>
+
+{% for blog in blogs %}
+
+<div class="blog-container">
+    <h2>{{ blog.title }}</h2>
+    <time datetime="{{ blog.date }}">{{ blog.date|date:"d/m/Y" }}</time>
+
+    {% if blog.image %}
+    <img src="{{ blog.image.url }}"></img>
+    {% endif %}
+
+    {% if blog.url %}
+        {% if 'youtube' in blog.url %}
+        <iframe src="{{ blog.url }}" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        {% else %}
+        <a href="{{ blog.url }}" target="_blank">{{ blog.url }}</a>
+        {% endif %}
+
+    {% endif %}
+
+    <p>{{ blog.text|safe }}</p>
+    
+</div>
+
+<hr>
+
+{% endfor %}
+
+
+{% endblock %}
+
+
+
